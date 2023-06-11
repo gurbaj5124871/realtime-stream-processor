@@ -24,13 +24,20 @@ In the main directory, run the following command:
 docker compose -f docker-compose.yaml up -d
 ```
 
-This will spin up the technologies mentioned above. After this, you can run the following command to start the consumer application:
+This will spin up the technologies mentioned above. After this, you can run the following commands to start the consumer application:
 
 ```
+go mod download
 go run main.go
+```
+
+To mock the data for the application, you can run the following command:
+
+```
+go run mocker/main.go
 ```
 
 ## Improvements
 
 1. Setup env variables for the application
-2. Implement retry logic for kafka consumer when it crashes (we need to not to ack the messages so that they can be retried)
+2. Implement retry logic for kafka consumer when it crashes (we need to not ack the messages so that they can be retried), another approach is to use dead letter queue but since we are using temporal, our main queue will only crash in cases when either kafka or temporal is down, so we can block the main queue.
