@@ -37,6 +37,11 @@ To mock the data for the application, you can run the following command:
 go run mocker/main.go
 ```
 
+## Monitoring Interfaces
+
+1. Temporal UI :- https://localhost:8088
+2. MongoDB UI :- https://localhost:8081
+
 ## Improvements
 
 1. Setup env variables for the application
