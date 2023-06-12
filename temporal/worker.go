@@ -11,7 +11,9 @@ func InitialiseTemporalWorker(temporalClient *client.Client) *worker.Worker {
 	queue := "livestream-data-processor-queue"
 
 	// use options to control max concurrent activity executions, retry policy and timeouts
-	opts := worker.Options{}
+	opts := worker.Options{
+		MaxConcurrentActivityExecutionSize: 100,
+	}
 	tw := worker.New(*temporalClient, queue, opts)
 	defer tw.Stop()
 
