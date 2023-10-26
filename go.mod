@@ -3,13 +3,13 @@ module github.com/gurbaj5124871/realtime-stream-processor
 go 1.20
 
 require (
+	github.com/brianvoe/gofakeit/v6 v6.22.0
 	github.com/segmentio/kafka-go v0.4.40
 	go.mongodb.org/mongo-driver v1.11.7
 	go.temporal.io/sdk v1.23.0
 )
 
 require (
-	github.com/brianvoe/gofakeit/v6 v6.22.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/facebookgo/clock v0.0.0-20150410010913-600d898af40a // indirect
 	github.com/gogo/googleapis v1.4.1 // indirect
@@ -42,7 +42,7 @@ require (
 	golang.org/x/text v0.9.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
 	google.golang.org/genproto v0.0.0-20230525154841-bd750badd5c6 // indirect
-	google.golang.org/grpc v1.55.0 // indirect
+	google.golang.org/grpc v1.56.3 // indirect
 	google.golang.org/protobuf v1.30.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
